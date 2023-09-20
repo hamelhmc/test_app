@@ -19,10 +19,9 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
-            ],
+            "styles": ["@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.css"],
+            "deleteOutputPath": true,
+            "aot": true,
             "scripts": []
           },
           "configurations": {
@@ -53,6 +52,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "hmr": true
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
@@ -76,11 +78,9 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.css"],
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
           }
         },
         "lint": {
