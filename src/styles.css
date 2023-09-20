@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/sanitize.css/sanitize.css');
+@import url('../node_modules/sanitize.css/forms.css');
+@import url('../node_modules/sanitize.css/typography.css');
+@import url('../node_modules/sanitize.css/reduce-motion.css');
+@import url('../node_modules/sanitize.css/system-ui.css');
+@import url('../node_modules/sanitize.css/ui-monospace.css');
+@import url('../node_modules/sanitize.css/assets.css');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-weight: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
