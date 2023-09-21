@@ -128,28 +128,8 @@
         "@typescript-eslint/naming-convention": [
           "warn",
           {
-            "format": ["camelCase"],
-            "leadingUnderscore": "forbid",
-            "selector": "default"
-          },
-          {
-            "format": ["PascalCase"],
-            "selector": "typeLike"
-          },
-          {
-            "format": ["PascalCase"],
-            "prefix": ["T", "K"],
-            "selector": "typeParameter"
-          },
-          {
             "format": ["UPPER_CASE"],
             "selector": "enumMember"
-          },
-          {
-            "format": ["PascalCase"],
-            "prefix": ["can", "did", "has", "is", "must", "needs", "should", "will"],
-            "selector": ["memberLike", "variableLike"],
-            "types": ["boolean"]
           }
         ]
       }
