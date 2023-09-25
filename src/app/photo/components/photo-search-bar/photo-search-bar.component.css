@@ -1,0 +1,21 @@
+/* Estilo para el formulario de búsqueda */
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search-field {
+  width: 100%;
+}
+
+mat-icon {
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+mat-icon:hover {
+  color: #f00;
+}

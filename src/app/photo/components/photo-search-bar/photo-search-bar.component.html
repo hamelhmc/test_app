@@ -1,0 +1,19 @@
+<form
+  [formGroup]="searchForm"
+  class="search-form">
+  <mat-form-field class="search-field">
+    <input
+      matInput
+      formControlName="searchText"
+      placeholder="Buscar por ID o nombre" />
+    <button
+      type="button"
+      *ngIf="searchForm.get('searchText')?.value"
+      mat-icon-button
+      matSuffix
+      aria-label="Limpiar búsqueda"
+      (click)="clearSearch()">
+      <mat-icon matSuffix>clear</mat-icon>
+    </button>
+  </mat-form-field>
+</form>

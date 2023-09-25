@@ -7,4 +7,14 @@
       {{ title | titlecase }}
     </a>
   </h1>
+  <aside>
+    <h2 class="header__title">
+      <a
+        class="header__link"
+        [title]="title"
+        [routerLink]="['login']">
+        Login
+      </a>
+    </h2>
+  </aside>
 </header>

@@ -1,0 +1,16 @@
+<article
+  #photoCard
+  class="photo-card">
+  <figure class="photo-card__image">
+    <img
+      class="photo-card__image-img"
+      [src]="photo?.photo"
+      [alt]="photo?.text ?? ''"
+      width="200px"
+      height="200px"
+      (error)="handleImageError($event)" />
+  </figure>
+  <figcaption class="photo-card__content">
+    <p class="photo-card__text">{{ photo?.text ?? '' }}</p>
+  </figcaption>
+</article>

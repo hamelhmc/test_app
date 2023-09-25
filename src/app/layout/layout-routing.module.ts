@@ -7,7 +7,16 @@ const routes: Routes = [
   {
     path: '',
     component: BaseLayoutComponent,
-    children: [],
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../photo/photo.module').then((m) => m.PhotoModule),
+      },
+      {
+        path: '',
+        loadChildren: () => import('../login/login.module').then((m) => m.LoginModule),
+      },
+    ],
   },
   { path: '**', component: NotFoundViewComponent },
 ];

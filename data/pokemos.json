@@ -5049,41 +5049,6 @@
       "id": 1010,
       "text": "iron-leaves",
       "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1010.png"
-    },
-    {
-      "id": 1011,
-      "text": "dipplin",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1011.png"
-    },
-    {
-      "id": 1012,
-      "text": "poltchageist",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1012.png"
-    },
-    {
-      "id": 1013,
-      "text": "sinistcha",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png"
-    },
-    {
-      "id": 1014,
-      "text": "okidogi",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1014.png"
-    },
-    {
-      "id": 1015,
-      "text": "munkidori",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1015.png"
-    },
-    {
-      "id": 1016,
-      "text": "fezandipiti",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1016.png"
-    },
-    {
-      "id": 1017,
-      "text": "ogerpon",
-      "photo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1017.png"
     }
   ]
 }
