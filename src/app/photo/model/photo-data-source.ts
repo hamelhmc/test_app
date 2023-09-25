@@ -5,8 +5,8 @@ import { ListRange } from '@angular/cdk/collections';
 import { PhotoRepositoryService } from '../services/photo-repository.service';
 import { Photo } from './photo.interface';
 
-const DEFAULT_PHOTOS_PER_PAGE = 200;
-const MAX_PHOTOS_COUNT = 100;
+const DEFAULT_PHOTOS_PER_PAGE = 100;
+const MAX_PHOTOS_COUNT = 1000;
 const DEFAULT_DELAY = 200;
 
 export class PhotoDataSource extends DataSource<Photo | undefined> {

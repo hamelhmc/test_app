@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { PhotoCardComponent } from './components/photo-card/photo-card.component';
@@ -23,6 +24,9 @@ import { PhotoRepositoryService } from './services/photo-repository.service';
     MatInputModule,
     MatIconModule,
   ],
-  providers: [PhotoRepositoryService],
+  providers: [
+    PhotoRepositoryService,
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { subscriptSizing: 'dynamic' } },
+  ],
 })
 export class PhotoModule {}
