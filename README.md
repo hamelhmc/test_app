@@ -1,27 +1,69 @@
-# TestApp
+# **Prueba Técnica - Aplicación Angular**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+## **Información de Entorno de Desarrollo**
 
-## Development server
+- **Angular CLI:** 16.2.3
+- **Node:** ^16.14.0 || ^18.10.0
+- **Package Manager:** npm 10.1.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## **Configuración Adicional**
 
-## Code scaffolding
+- Se ha configurado ESLint y Prettier para mantener un código limpio y consistente en el proyecto.
+- Se ha incorporado Angular Material para mejorar la interfaz de usuario y proporcionar componentes de diseño visualmente atractivos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## **Instrucciones para Ejecutar la Aplicación en Local**
 
-## Build
+Sigue estos pasos para ejecutar la aplicación en tu entorno de desarrollo local:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Instala Angular CLI globalmente si aún no lo has hecho:
 
-## Running unit tests
+```bash
+npm install -g @angular/cli@16.2.3
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Clona el repositorio de la aplicación desde GitHub:
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/hamelhmc/test_app.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Navega al directorio de la aplicación:
 
-## Further help
+```bash
+cd test_app
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Instala las dependencias del proyecto:
+
+```bash
+npm install
+```
+
+5. Ejecuta la aplicación localmente:
+
+```bash
+ng serve
+```
+
+6. Abre tu navegador web y ve a **`http://localhost:4200/`** para ver la aplicación en funcionamiento.
+
+## **Pruebas y Cobertura**
+
+Para ejecutar las pruebas y obtener los resultados de cobertura, utiliza el siguiente comando:
+
+```bash
+npm run ci:test
+```
+
+Esto ejecutará las pruebas unitarias y generará informes de cobertura para evaluar la calidad del código.
+
+## **Versión Desplegada**
+
+Puedes acceder a la versión desplegada de la aplicación en el siguiente enlace:
+
+**[Aplicación Desplegada](https://hamelhmc.github.io/test_app/)**
+
+## **Contacto**
+
+- Correo Electrónico: **[hamiltonmercadocuellar@gmail.com](mailto:hamiltonmercadocuellar@gmail.com)**
+- GitHub: **https://github.com/hamelhmc**
