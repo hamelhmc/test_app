@@ -32,7 +32,7 @@ describe('PhotoDataSource', () => {
 
     dataSource.connect(collectionViewer);
 
-    expect(photoService.searchPhotosByNameOrID).toHaveBeenCalledWith(null, 0, 200);
+    expect(photoService.searchPhotosByNameOrID).toHaveBeenCalledWith(null, 0, 100);
   });
 
   function generateTestData(count: number): Photo[] {
@@ -62,6 +62,6 @@ describe('PhotoDataSource', () => {
 
     expect(dataSource.isLoading).toBe(true);
     expect(dataSource['searchString']).toBe(searchString);
-    expect(photoService.searchPhotosByNameOrID).toHaveBeenCalledWith(searchString, 0, 200);
+    expect(photoService.searchPhotosByNameOrID).toHaveBeenCalledWith(searchString, 0, 100);
   });
 });
