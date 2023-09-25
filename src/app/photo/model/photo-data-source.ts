@@ -12,7 +12,7 @@ const DEFAULT_DELAY = 200;
 export class PhotoDataSource extends DataSource<Photo | undefined> {
   private readonly _length = MAX_PHOTOS_COUNT;
   private readonly _pageSize = DEFAULT_PHOTOS_PER_PAGE;
-  private readonly _cachedData = Array.from<Photo>({ length: this._length });
+  private _cachedData = Array.from<Photo>({ length: this._length });
   private readonly _fetchedPages = new Set<number>();
   private readonly _dataStream = new BehaviorSubject<(Photo | undefined)[]>(this._cachedData);
   private readonly _subscription = new Subscription();
@@ -35,10 +35,6 @@ export class PhotoDataSource extends DataSource<Photo | undefined> {
       })
     );
 
-    if (this.searchString) {
-      this._fetchPage(0);
-    }
-
     return this._dataStream;
   }
 
@@ -48,15 +44,24 @@ export class PhotoDataSource extends DataSource<Photo | undefined> {
 
   public searchByString(searchString: string): void {
     this.searchString = searchString;
-    this._fetchPage(0);
+    this._cachedData = Array.from<Photo>({ length: this._length });
+    this.loadData(0, this.searchString);
   }
 
   public cargarPagina(pagina: number): void {
     this._fetchPage(pagina);
   }
 
-  public loadData(page: number, searchString: string | null): Observable<Photo[]> {
-    return this.photoService.searchPhotosByNameOrID(searchString, page, this._pageSize);
+  public loadData(page: number, searchString: string | null): void {
+    this.isLoading = true;
+    this.photoService
+      .searchPhotosByNameOrID(searchString, page, this._pageSize)
+      .pipe(delay(DEFAULT_DELAY))
+      .subscribe((data: Photo[]) => {
+        this.isLoading = false;
+        this._cachedData.splice(page * this._pageSize, this._pageSize, ...data);
+        this._dataStream.next(this._cachedData);
+      });
   }
 
   private _fetchPage(page: number): void {
@@ -64,15 +69,7 @@ export class PhotoDataSource extends DataSource<Photo | undefined> {
       return;
     }
     this._fetchedPages.add(page);
-    this.isLoading = true;
-
-    this.loadData(page, this.searchString)
-      .pipe(delay(DEFAULT_DELAY))
-      .subscribe((data: Photo[]) => {
-        this.isLoading = false;
-        this._cachedData.splice(page * this._pageSize, this._pageSize, ...data);
-        this._dataStream.next(this._cachedData);
-      });
+    this.loadData(page, this.searchString);
   }
 
   private _getPageForIndex(index: number): number {
